@@ -7,8 +7,6 @@ then
     export HISTTIMEFORMAT='%F %T '
     export HISTFILE="$HOME/.history/history-$(date +%Y-%m-%d.%H:%M:%S).$$"
 
-    echo "History set to use $HISTFILE"
-
     # close any old history file by zeroing HISTFILESIZE  
     export HISTFILESIZE=0  
     # then set HISTFILESIZE to a large value
