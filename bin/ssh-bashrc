@@ -1,0 +1,6 @@
+#!/bin/bash
+f=$1
+shift
+
+DIR="$(dirname $(readlink -f ${BASH_SOURCE[0]}))/../"
+autossh $f -t "touch /tmp/.ssh-bashrc; chmod 0666 /tmp/.ssh-bashrc; echo $(base64 -w0 $DIR/ssh-bashrc) | base64 -d > /tmp/.ssh-bashrc; bash --rcfile /tmp/.ssh-bashrc" $@

@@ -8,7 +8,7 @@ _reload()
 DIR="$(dirname $(readlink -f ${BASH_SOURCE[0]}))"
 EXTRAS="$DIR/bashrc.d"
 
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$DIR/bin
 
 
 # include extra files
